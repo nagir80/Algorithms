@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "trie", "trie.vcxproj", "{E71086F6-CD2D-4076-86C3-646FD445D93B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "trie_matching", "..\trie_matching\trie_matching.vcxproj", "{8AC0025A-C26D-472E-BA39-A1230013C8C8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "trie_matching_extended", "..\trie_matching_extended\trie_matching_extended.vcxproj", "{B3A7576F-D40D-4BA4-A931-8B8241E9542A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "suffix_tree", "..\suffix_tree\suffix_tree.vcxproj", "{876A6BCA-4A37-4037-AF20-40BD956BD430}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E71086F6-CD2D-4076-86C3-646FD445D93B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E71086F6-CD2D-4076-86C3-646FD445D93B}.Debug|Win32.Build.0 = Debug|Win32
+		{E71086F6-CD2D-4076-86C3-646FD445D93B}.Release|Win32.ActiveCfg = Release|Win32
+		{E71086F6-CD2D-4076-86C3-646FD445D93B}.Release|Win32.Build.0 = Release|Win32
+		{8AC0025A-C26D-472E-BA39-A1230013C8C8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8AC0025A-C26D-472E-BA39-A1230013C8C8}.Debug|Win32.Build.0 = Debug|Win32
+		{8AC0025A-C26D-472E-BA39-A1230013C8C8}.Release|Win32.ActiveCfg = Release|Win32
+		{8AC0025A-C26D-472E-BA39-A1230013C8C8}.Release|Win32.Build.0 = Release|Win32
+		{B3A7576F-D40D-4BA4-A931-8B8241E9542A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B3A7576F-D40D-4BA4-A931-8B8241E9542A}.Debug|Win32.Build.0 = Debug|Win32
+		{B3A7576F-D40D-4BA4-A931-8B8241E9542A}.Release|Win32.ActiveCfg = Release|Win32
+		{B3A7576F-D40D-4BA4-A931-8B8241E9542A}.Release|Win32.Build.0 = Release|Win32
+		{876A6BCA-4A37-4037-AF20-40BD956BD430}.Debug|Win32.ActiveCfg = Debug|Win32
+		{876A6BCA-4A37-4037-AF20-40BD956BD430}.Debug|Win32.Build.0 = Debug|Win32
+		{876A6BCA-4A37-4037-AF20-40BD956BD430}.Release|Win32.ActiveCfg = Release|Win32
+		{876A6BCA-4A37-4037-AF20-40BD956BD430}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

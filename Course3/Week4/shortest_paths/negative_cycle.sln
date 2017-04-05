@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "negative_cycle", "..\negative_cycle\negative_cycle.vcxproj", "{0DFDE862-ABEE-4722-9820-BD7EAA68FA0E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shortest_paths", "shortest_paths.vcxproj", "{1D0BDA2C-C112-42AD-9883-432F14E0363E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DFDE862-ABEE-4722-9820-BD7EAA68FA0E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0DFDE862-ABEE-4722-9820-BD7EAA68FA0E}.Debug|Win32.Build.0 = Debug|Win32
+		{0DFDE862-ABEE-4722-9820-BD7EAA68FA0E}.Release|Win32.ActiveCfg = Release|Win32
+		{0DFDE862-ABEE-4722-9820-BD7EAA68FA0E}.Release|Win32.Build.0 = Release|Win32
+		{1D0BDA2C-C112-42AD-9883-432F14E0363E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1D0BDA2C-C112-42AD-9883-432F14E0363E}.Debug|Win32.Build.0 = Debug|Win32
+		{1D0BDA2C-C112-42AD-9883-432F14E0363E}.Release|Win32.ActiveCfg = Release|Win32
+		{1D0BDA2C-C112-42AD-9883-432F14E0363E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

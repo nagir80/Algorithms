@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "brackets", "brackets.vcxproj", "{EE6B2DAC-3D7A-47A0-95FC-F12CBF4CDCC2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tree_height", "..\..\tree_height\tree_height\tree_height.vcxproj", "{7C90F405-8E8B-4966-A3EB-F969DF181BE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE6B2DAC-3D7A-47A0-95FC-F12CBF4CDCC2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EE6B2DAC-3D7A-47A0-95FC-F12CBF4CDCC2}.Debug|Win32.Build.0 = Debug|Win32
+		{EE6B2DAC-3D7A-47A0-95FC-F12CBF4CDCC2}.Release|Win32.ActiveCfg = Release|Win32
+		{EE6B2DAC-3D7A-47A0-95FC-F12CBF4CDCC2}.Release|Win32.Build.0 = Release|Win32
+		{7C90F405-8E8B-4966-A3EB-F969DF181BE3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7C90F405-8E8B-4966-A3EB-F969DF181BE3}.Debug|Win32.Build.0 = Debug|Win32
+		{7C90F405-8E8B-4966-A3EB-F969DF181BE3}.Release|Win32.ActiveCfg = Release|Win32
+		{7C90F405-8E8B-4966-A3EB-F969DF181BE3}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

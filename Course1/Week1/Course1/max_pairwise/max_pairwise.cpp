@@ -1,5 +1,13 @@
 #include <iostream>
+#include <iterator>
 #include <vector>
+#include <limits>
+#include <functional>
+#include <algorithm>
+#include <string>
+
+
+
 
 using std::vector;
 using std::cin;
@@ -33,19 +41,55 @@ long long MaxPairwiseProductFast(const vector<int>& numbers) {
 }
 
 int main() {
-	int n;
-	cin >> n;
-	vector<int> numbers(n);
-	for (int i = 0; i < n; ++i) {
-		cin >> numbers[i];
+	vector<std::string> coll;
+	std::copy(std::istream_iterator<std::string>(std::cin), std::istream_iterator<std::string>(), std::back_inserter(coll));
+	std::vector<std::function<int(int, int)>> tasks;
+
+	/*
+	tasks.push_back([](int x, int y){
+		return x + y;
+	});
+	tasks.push_back([](int x, int y) {
+		return x - y;
+	});
+	tasks.push_back([](int x, int y) {
+		return x * y;
+	});
+	tasks.push_back([](int x, int y) {
+		return x / y;
+	});
+	tasks.push_back([](int x, int y) {
+		return x % y;
+	});
+
+
+	for (auto f : tasks) {
+		std::cout << f(5,6) << std::endl;
 	}
 
+
+	std::cout << std::hex << std::numeric_limits<int>::max() << std::endl;
+	std::cout << std::hex << std::numeric_limits<unsigned int>::max() << std::endl;
+	std::cout << std::hex << std::numeric_limits<long>::max() << std::endl;
+	std::cout << std::hex << std::numeric_limits<long long>::max() << std::endl;
+	std::cout << std::hex << std::numeric_limits<double>::max() << std::endl;
+
+	std::cout << std::hex << std::numeric_limits<long double>::max() << std::endl;
+	std::cout << std::endl;
+	std::cout << std::is_integral<double>() << std::endl;
+	std::cout << std::common_type<int, int>::type();
+
+
+//	for (int i = 0; i < n; ++i) {
+//		cin >> numbers[i];
+//	}
+
 //	long long result1 = MaxPairwiseProduct(numbers);
-	long long result2 = MaxPairwiseProductFast(numbers);
+//	long long result2 = MaxPairwiseProductFast(numbers);
 
 //	cout << result1 << "\n";
-	cout << result2 << "\n";
-
+//	cout << result2 << "\n";
+*/
 	int i;
 	cin >> i;
 
