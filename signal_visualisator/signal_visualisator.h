@@ -4,6 +4,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_signal_visualisator.h"
 #include "qmath.h"
+#include "muParser.h"
 
 class signal_visualisator : public QMainWindow
 {

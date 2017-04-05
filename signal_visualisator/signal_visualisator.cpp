@@ -21,6 +21,7 @@ void signal_visualisator::handleButton(){
 		int y = -100*sin(2*i*3.14159 / 180);
 		
 		hlp->addRect(i, y,2, 2);
+		auto it = hlp->items();
 	}
 
 	

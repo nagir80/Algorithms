@@ -15,7 +15,6 @@ QTGraphPlane::QTGraphPlane(QWidget *parent)
 	this->setScene(base_scene);
 	this->show();
 
-	auto res = this->items();
 }
 
 QTGraphPlane::~QTGraphPlane()
