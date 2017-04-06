@@ -26,7 +26,7 @@ public:
     {
         if (QTGraphPlane->objectName().isEmpty())
             QTGraphPlane->setObjectName(QStringLiteral("QTGraphPlane"));
-        QTGraphPlane->resize(400, 300);
+        QTGraphPlane->resize(566, 402);
 
         retranslateUi(QTGraphPlane);
 

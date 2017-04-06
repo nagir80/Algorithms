@@ -13,7 +13,6 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
@@ -24,7 +23,7 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include "qtgraphplane.h";
+#include "qcustomplot.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -35,10 +34,10 @@ public:
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QGridLayout *gridLayout;
-    QGraphicsView *graphicsView;
-    QGraphicsView *graphicsView_3;
-    QGraphicsView *graphicsView_2;
-    QGraphicsView *graphicsView_4;
+    QCustomPlot *widget;
+    QCustomPlot *widget_2;
+    QCustomPlot *widget_3;
+    QCustomPlot *widget_4;
     QGridLayout *gridLayout_2;
     QTextEdit *textEdit;
     QPushButton *pushButton;
@@ -52,7 +51,7 @@ public:
     {
         if (signal_visualisatorClass->objectName().isEmpty())
             signal_visualisatorClass->setObjectName(QStringLiteral("signal_visualisatorClass"));
-        signal_visualisatorClass->resize(1112, 858);
+        signal_visualisatorClass->resize(1117, 873);
         centralWidget = new QWidget(signal_visualisatorClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayoutWidget = new QWidget(centralWidget);
@@ -66,29 +65,36 @@ public:
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-//        graphicsView = new QGraphicsView(verticalLayoutWidget);
-		graphicsView = new QTGraphPlane(verticalLayoutWidget);
-	
+        widget = new QCustomPlot(verticalLayoutWidget);
+        widget->setObjectName(QStringLiteral("widget"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy);
 
-        graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        gridLayout->addWidget(widget, 0, 1, 1, 1);
 
-        gridLayout->addWidget(graphicsView, 0, 0, 1, 1);
+        widget_2 = new QCustomPlot(verticalLayoutWidget);
+        widget_2->setObjectName(QStringLiteral("widget_2"));
+        sizePolicy.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
+        widget_2->setSizePolicy(sizePolicy);
 
-		graphicsView_3 = new QTGraphPlane(verticalLayoutWidget);
-		
-        graphicsView_3->setObjectName(QStringLiteral("graphicsView_3"));
+        gridLayout->addWidget(widget_2, 2, 0, 1, 1);
 
-        gridLayout->addWidget(graphicsView_3, 2, 0, 1, 1);
+        widget_3 = new QCustomPlot(verticalLayoutWidget);
+        widget_3->setObjectName(QStringLiteral("widget_3"));
+        sizePolicy.setHeightForWidth(widget_3->sizePolicy().hasHeightForWidth());
+        widget_3->setSizePolicy(sizePolicy);
 
-		graphicsView_2 = new QTGraphPlane(verticalLayoutWidget);
-        graphicsView_2->setObjectName(QStringLiteral("graphicsView_2"));
+        gridLayout->addWidget(widget_3, 2, 1, 1, 1);
 
-        gridLayout->addWidget(graphicsView_2, 0, 1, 1, 1);
+        widget_4 = new QCustomPlot(verticalLayoutWidget);
+        widget_4->setObjectName(QStringLiteral("widget_4"));
+        sizePolicy.setHeightForWidth(widget_4->sizePolicy().hasHeightForWidth());
+        widget_4->setSizePolicy(sizePolicy);
 
-		graphicsView_4 = new QTGraphPlane(verticalLayoutWidget);
-        graphicsView_4->setObjectName(QStringLiteral("graphicsView_4"));
-
-        gridLayout->addWidget(graphicsView_4, 2, 1, 1, 1);
+        gridLayout->addWidget(widget_4, 0, 0, 1, 1);
 
 
         verticalLayout->addLayout(gridLayout);
@@ -129,7 +135,7 @@ public:
         signal_visualisatorClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(signal_visualisatorClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1112, 21));
+        menuBar->setGeometry(QRect(0, 0, 1117, 21));
         signal_visualisatorClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(signal_visualisatorClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -138,7 +144,6 @@ public:
         statusBar->setObjectName(QStringLiteral("statusBar"));
         signal_visualisatorClass->setStatusBar(statusBar);
 
-		
         retranslateUi(signal_visualisatorClass);
 
         QMetaObject::connectSlotsByName(signal_visualisatorClass);
