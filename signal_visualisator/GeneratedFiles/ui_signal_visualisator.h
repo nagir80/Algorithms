@@ -72,11 +72,16 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
         widget->setSizePolicy(sizePolicy);
-
+		widget->xAxis->setRange(-200, 200);
+		widget->yAxis->setRange(-2, 2);
+		
         gridLayout->addWidget(widget, 0, 1, 1, 1);
 
         widget_2 = new QCustomPlot(verticalLayoutWidget);
         widget_2->setObjectName(QStringLiteral("widget_2"));
+		widget_2->xAxis->setRange(-200, 200);
+		widget_2->yAxis->setRange(-2, -2);
+
         sizePolicy.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
         widget_2->setSizePolicy(sizePolicy);
 
@@ -86,14 +91,16 @@ public:
         widget_3->setObjectName(QStringLiteral("widget_3"));
         sizePolicy.setHeightForWidth(widget_3->sizePolicy().hasHeightForWidth());
         widget_3->setSizePolicy(sizePolicy);
-
+		widget_3->xAxis->setRange(-200, 200);
+		widget_3->yAxis->setRange(-2, 2);
         gridLayout->addWidget(widget_3, 2, 1, 1, 1);
 
         widget_4 = new QCustomPlot(verticalLayoutWidget);
         widget_4->setObjectName(QStringLiteral("widget_4"));
         sizePolicy.setHeightForWidth(widget_4->sizePolicy().hasHeightForWidth());
         widget_4->setSizePolicy(sizePolicy);
-
+		widget_4->xAxis->setRange(-200, 200);
+		widget_4->yAxis->setRange(-2, 2);
         gridLayout->addWidget(widget_4, 0, 0, 1, 1);
 
 

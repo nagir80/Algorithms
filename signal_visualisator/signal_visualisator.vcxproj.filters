@@ -50,15 +50,6 @@
     <ClCompile Include="GeneratedFiles\qrc_signal_visualisator.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="qtgraphplane.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_qtgraphplane.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qtgraphplane.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
     <ClCompile Include="Parser\src\muParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -105,9 +96,6 @@
     </CustomBuild>
     <CustomBuild Include="signal_visualisator.qrc">
       <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="qtgraphplane.h">
-      <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="qtgraphplane.ui">
       <Filter>Form Files</Filter>
