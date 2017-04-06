@@ -107,6 +107,9 @@ namespace mu
     static T Rint(T v)  { return floor(v + (T)0.5); }
     static T Sign(T v)  { return (T)((v<0) ? -1 : (v>0) ? 1 : 0); }
     static T Pow(T v1, T v2) { return std::pow(v1, v2); }
+
+	static T  MyFunc(T v) { return v; }
+
   };
 }
 

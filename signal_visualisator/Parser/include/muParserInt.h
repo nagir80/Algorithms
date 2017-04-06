@@ -79,6 +79,9 @@ private:
     static value_type  NotEqual(value_type v1, value_type v2);
     static value_type  Not(value_type v1);
 
+	static value_type  MyFunc(value_type v1);
+
+
     static int IsHexVal(const char_type* a_szExpr, int *a_iPos, value_type *a_iVal);
     static int IsBinVal(const char_type* a_szExpr, int *a_iPos, value_type *a_iVal);
     static int IsVal   (const char_type* a_szExpr, int *a_iPos, value_type *a_iVal);

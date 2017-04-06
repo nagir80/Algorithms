@@ -86,6 +86,15 @@
     <ClCompile Include="qcustomplot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtinputwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtinputwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QTInputWidget\qtinputwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="signal_visualisator.h">
@@ -97,18 +106,15 @@
     <CustomBuild Include="signal_visualisator.qrc">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="qtgraphplane.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="qcustomplot.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\QTInputWidget\qtinputwidget.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_signal_visualisator.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_qtgraphplane.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="Parser\include\muParser.h">
@@ -153,5 +159,11 @@
     <ClInclude Include="Parser\include\muParserTokenReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="signal_visualisator.rc" />
   </ItemGroup>
 </Project>

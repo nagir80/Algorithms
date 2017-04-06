@@ -66,6 +66,10 @@ namespace mu
   value_type Parser::ACosh(value_type v) { return MathImpl<value_type>::ACosh(v); }
   value_type Parser::ATanh(value_type v) { return MathImpl<value_type>::ATanh(v); }
 
+  value_type Parser::MyFunc(value_type v) { return MathImpl<value_type>::MyFunc(v); }
+
+
+
   //---------------------------------------------------------------------------
   // Logarithm functions
 
@@ -307,6 +311,8 @@ namespace mu
       DefineFun(_T("avg"), Avg);
       DefineFun(_T("min"), Min);
       DefineFun(_T("max"), Max);
+	  DefineFun(_T("myfunc"), MyFunc);
+
     }
   }
 

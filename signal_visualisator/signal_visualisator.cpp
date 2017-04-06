@@ -1,4 +1,8 @@
 #include "signal_visualisator.h"
+//#include "ui_add_graph.h"
+#include "qtinputwidget.h"
+
+
 
 signal_visualisator::signal_visualisator(QWidget *parent)
 	: QMainWindow(parent)
@@ -15,7 +19,32 @@ signal_visualisator::~signal_visualisator()
 void signal_visualisator::handleButton(){
 	QVector<double> x1(101), y1(101);
 	QVector<double> x2(101), y2(101);
+	
+	//QString edit1 = ui.textEdit->toPlainText();
 
+	//ui.textEdit_2->setText(edit1);
+	
+	
+
+	
+	QHBoxLayout *lay = new QHBoxLayout(ui.widget_5);
+	QTextEdit *te = new QTextEdit();
+	QTextEdit *te2 = new QTextEdit();
+	QTextEdit *te3 = new QTextEdit();
+	QTextEdit *te4 = new QTextEdit();
+
+	lay->addWidget(te);
+	lay->addWidget(te2);
+	lay->addWidget(te3);
+	lay->addWidget(te4);
+
+
+
+	
+	
+//	ui.gridLayout_2->update();
+
+	/*
 	static int u = 0;
 	for (int i = 0; i<101; ++i)
 	{
@@ -29,7 +58,7 @@ void signal_visualisator::handleButton(){
 
 
 	}
-
+	
 	ui.widget->addGraph();
 	ui.widget->graph(u)->addData(x1, y1);
 	ui.widget->replot();
@@ -61,4 +90,5 @@ void signal_visualisator::handleButton(){
 	ui.widget_3->yAxis->setRange(-1, 1);
 	ui.widget_3->replot();
 	u++;
+	*/
 }

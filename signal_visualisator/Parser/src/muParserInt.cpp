@@ -62,6 +62,9 @@ value_type ParserInt::Equal(value_type v1, value_type v2)     { return Round(v1)
 value_type ParserInt::NotEqual(value_type v1, value_type v2)  { return Round(v1) != Round(v2); }
 value_type ParserInt::Not(value_type v) { return !Round(v); }
 
+//value_type ParserInt::MyFunc(value_type v)  { return (value_type)Round(fabs((double)v)); }
+
+
 value_type ParserInt::Pow(value_type v1, value_type v2) 
 { 
   return std::pow((double)Round(v1), (double)Round(v2)); 

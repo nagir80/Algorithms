@@ -19,6 +19,7 @@ public slots:
 
 private:
 	Ui::signal_visualisatorClass ui;
+	
 };
 
 #endif // SIGNAL_VISUALISATOR_H

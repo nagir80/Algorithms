@@ -96,6 +96,9 @@ namespace mu
     static value_type  Rint(value_type);
     static value_type  Sign(value_type);
 
+	static value_type  MyFunc(value_type);
+
+
     // Prefix operators
     // !!! Unary Minus is a MUST if you want to use negative signs !!!
     static value_type  UnaryMinus(value_type);

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1117</width>
-    <height>873</height>
+    <width>1141</width>
+    <height>905</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,11 +19,11 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>1091</width>
-      <height>798</height>
+      <width>1121</width>
+      <height>841</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout" stretch="5,1">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="16,4,1">
      <item>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="1">
@@ -69,22 +69,58 @@
       </layout>
      </item>
      <item>
-      <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,2" columnstretch="3,1,1">
+      <layout class="QGridLayout" name="gridLayout_2" rowstretch="0" columnstretch="0">
        <item row="0" column="0">
-        <widget class="QTextEdit" name="textEdit"/>
+        <widget class="QWidget" name="widget_5" native="true"/>
        </item>
-       <item row="1" column="0">
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <item>
         <widget class="QPushButton" name="pushButton">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="text">
-          <string>СТАРТ</string>
+          <string>Добавить график</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QTextEdit" name="textEdit_2"/>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
        </item>
-       <item row="0" column="2">
-        <widget class="QTextEdit" name="textEdit_3"/>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -96,7 +132,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1117</width>
+     <width>1141</width>
      <height>21</height>
     </rect>
    </property>
