@@ -25,20 +25,26 @@ void signal_visualisator::handleButton(){
 	//ui.textEdit_2->setText(edit1);
 	
 	
-
+	static int row = 0;
 	
-	QHBoxLayout *lay = new QHBoxLayout(ui.widget_5);
+	//QGridLayout *lay = new QGridLayout(ui.widget_5);
 	QTextEdit *te = new QTextEdit();
 	QTextEdit *te2 = new QTextEdit();
 	QTextEdit *te3 = new QTextEdit();
 	QTextEdit *te4 = new QTextEdit();
 
-	lay->addWidget(te);
-	lay->addWidget(te2);
-	lay->addWidget(te3);
-	lay->addWidget(te4);
 
 
+
+	//QScrollArea *scrollArea = new QScrollArea;
+	//scrollArea->setBackgroundRole(QPalette::Dark);
+	//scrollArea->setWidget(ui.gridLayout_2);
+	//ui.gridLayout_2->addWidget(te, row, 0);
+	//ui.gridLayout_2->addWidget(te2, row, 1);
+	//ui.gridLayout_2->addWidget(te3, row, 2);
+	//ui.gridLayout_2->addWidget(te4, row, 3);
+
+	row++;
 
 	
 	

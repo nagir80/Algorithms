@@ -13,6 +13,23 @@ using std::vector;
 vector<int> find_pattern(const string& pattern, const string& text) {
   vector<int> result;
   // Implement this function yourself
+  string work_str = pattern + "$" + text;
+  int border = 0;
+  vector<int> arr(work_str.length(), 0);
+  for (int i = 1; i < work_str.length(); i++){
+	  while ((border > 0) && (work_str[i] != work_str[border]))
+		  border = arr[border - 1];
+	  if (work_str[i] == work_str[border])
+		  border++;
+	  else
+		  border = 0;
+	  arr[i] = border;
+  }
+
+  for (int i = pattern.length(); i < work_str.length(); i++){
+	  if (arr[i] == pattern.length())
+		  result.push_back(i - 2 * pattern.length());
+  }
   return result;
 }
 
@@ -25,5 +42,8 @@ int main() {
     printf("%d ", result[i]);
   }
   printf("\n");
+
+  int n;
+  cin >> n;
   return 0;
 }

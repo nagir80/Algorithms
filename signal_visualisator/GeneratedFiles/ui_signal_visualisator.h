@@ -19,6 +19,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
@@ -38,8 +39,10 @@ public:
     QCustomPlot *widget_2;
     QCustomPlot *widget_3;
     QCustomPlot *widget_4;
-    QGridLayout *gridLayout_2;
-    QWidget *widget_5;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
+    QWidget *verticalLayoutWidget_2;
+    QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *pushButton;
     QPushButton *pushButton_3;
@@ -62,6 +65,7 @@ public:
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setSizeConstraint(QLayout::SetNoConstraint);
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
@@ -100,16 +104,24 @@ public:
 
         verticalLayout->addLayout(gridLayout);
 
-        gridLayout_2 = new QGridLayout();
-        gridLayout_2->setSpacing(6);
-        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        widget_5 = new QWidget(verticalLayoutWidget);
-        widget_5->setObjectName(QStringLiteral("widget_5"));
+        scrollArea = new QScrollArea(verticalLayoutWidget);
+        scrollArea->setObjectName(QStringLiteral("scrollArea"));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1117, 69));
+        verticalLayoutWidget_2 = new QWidget(scrollAreaWidgetContents);
+        verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
+        verticalLayoutWidget_2->setGeometry(QRect(-1, 0, 1121, 71));
+        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setSizeConstraint(QLayout::SetMinimumSize);
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        scrollArea->setWidget(scrollAreaWidgetContents);
 
-        gridLayout_2->addWidget(widget_5, 0, 0, 1, 1);
-
-
-        verticalLayout->addLayout(gridLayout_2);
+        verticalLayout->addWidget(scrollArea);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
@@ -138,7 +150,6 @@ public:
         verticalLayout->addLayout(horizontalLayout_2);
 
         verticalLayout->setStretch(0, 16);
-        verticalLayout->setStretch(1, 4);
         verticalLayout->setStretch(2, 1);
         signal_visualisatorClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(signal_visualisatorClass);
