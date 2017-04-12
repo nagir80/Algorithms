@@ -64,6 +64,7 @@ public:
 	 explicit BitMapClass(std::istream &in);
 	 void getBMapPallette(std::istream &in);
 	 void getPicturePlane(std::istream &in);
+	 Plane* getPlane(void) { return plane; }
 	~BitMapClass();
 };
 
