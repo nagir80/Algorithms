@@ -19,6 +19,17 @@ void BitMapClass::getPicturePlane(std::istream &in){
 	auto *plane_line = new std::vector<RGBQuads*>(i_header->bmiWidth);
 	plane = new Plane(i_header->bmiHeight, *plane_line);
 	in.seekg(f_header->bmfOffBits, in.beg);
+	switch (i_header->bmiBitCount){
+	case 8:
+		for (int i = 0; i < i_header->bmiHeight; i++){
+			for (int j = 0; j < i_header->bmiWidth; j++){
+				char num_palette;
+				in >> num_palette;
+				plane->at(i).at(j) = palette->at(num_palette);
+			}
+		}
+		break;
+	}
 }
 
 void BitMapClass::getBMapPallette(std::istream &in){

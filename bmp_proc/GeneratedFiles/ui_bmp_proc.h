@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QFileDialog>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
@@ -33,6 +34,7 @@ public:
     QMenu *menuSadsda;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
+	QFileDialog *fileDialog;
 
     void setupUi(QMainWindow *bmp_procClass)
     {
@@ -64,7 +66,12 @@ public:
         menuSadsda->addSeparator();
         menuSadsda->addAction(actionExit);
 
+		fileDialog = new QFileDialog(0, "File Open", 0, "*.bmp *.jpg");
+
         retranslateUi(bmp_procClass);
+
+		QObject::connect(actionOpen, SIGNAL(triggered()), bmp_procClass, SLOT(open_file()));
+		QObject::connect(actionExit, SIGNAL(triggered()), QApplication::instance(), SLOT(quit()));
 
         QMetaObject::connectSlotsByName(bmp_procClass);
     } // setupUi
