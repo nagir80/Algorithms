@@ -38,7 +38,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\Algorithms\signal_visualisator\Parser\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Repo\Algorithms\signal_visualisator\Parser\include;$(IncludePath)</IncludePath>
+    <SourcePath>D:\Repo\Algorithms\signal_visualisator\Parser\src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>

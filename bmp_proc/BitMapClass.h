@@ -65,6 +65,9 @@ public:
 	 void getBMapPallette(std::istream &in);
 	 void getPicturePlane(std::istream &in);
 	 Plane* getPlane(void) { return plane; }
+	 int getX(void) { return x_size; }
+	 int getY(void) { return y_size; }
+
 	~BitMapClass();
 };
 

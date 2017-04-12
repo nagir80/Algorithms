@@ -25,9 +25,11 @@ void bmp_proc::open_file(void){
 
 	QGraphicsScene *gS = new QGraphicsScene();
 
-	for (int i = 0; i < 128; i++){
-		for (int j = 0; j < 128; j++){
+	for (int i = 0; i < bmPlane.getY(); i++){
+		for (int j = 0; j < bmPlane.getX(); j++){
 			QPen *qp = new QPen(QColor(bmPlane.getPlane()->at(j).at(i)->R, bmPlane.getPlane()->at(j).at(i)->G, bmPlane.getPlane()->at(j).at(i)->B));
+			//QPen *qp = new QPen(Qt::black);
+
 			gS->addEllipse(j, i, 1, 1, *qp);
 		}
 	}

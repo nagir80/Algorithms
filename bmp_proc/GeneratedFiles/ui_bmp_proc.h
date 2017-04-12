@@ -28,52 +28,52 @@ QT_BEGIN_NAMESPACE
 class Ui_bmp_procClass
 {
 public:
-    QAction *actionOpen;
-    QAction *actionExit;
-    QWidget *centralWidget;
-    QMenuBar *menuBar;
-    QMenu *menuSadsda;
-    QToolBar *mainToolBar;
-    QStatusBar *statusBar;
+	QAction *actionOpen;
+	QAction *actionExit;
+	QWidget *centralWidget;
+	QMenuBar *menuBar;
+	QMenu *menuSadsda;
+	QToolBar *mainToolBar;
+	QStatusBar *statusBar;
 	QFileDialog *fileDialog;
 	QGraphicsView *grViewer;
 
-    void setupUi(QMainWindow *bmp_procClass)
-    {
-        if (bmp_procClass->objectName().isEmpty())
-            bmp_procClass->setObjectName(QStringLiteral("bmp_procClass"));
-        bmp_procClass->resize(600, 400);
-        actionOpen = new QAction(bmp_procClass);
-        actionOpen->setObjectName(QStringLiteral("actionOpen"));
-        actionExit = new QAction(bmp_procClass);
-        actionExit->setObjectName(QStringLiteral("actionExit"));
-        centralWidget = new QWidget(bmp_procClass);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        bmp_procClass->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(bmp_procClass);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 21));
-        menuSadsda = new QMenu(menuBar);
-        menuSadsda->setObjectName(QStringLiteral("menuSadsda"));
-        bmp_procClass->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(bmp_procClass);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        bmp_procClass->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        statusBar = new QStatusBar(bmp_procClass);
-        statusBar->setObjectName(QStringLiteral("statusBar"));
-        bmp_procClass->setStatusBar(statusBar);
+	void setupUi(QMainWindow *bmp_procClass)
+	{
+		if (bmp_procClass->objectName().isEmpty())
+			bmp_procClass->setObjectName(QStringLiteral("bmp_procClass"));
+		bmp_procClass->resize(600, 400);
+		actionOpen = new QAction(bmp_procClass);
+		actionOpen->setObjectName(QStringLiteral("actionOpen"));
+		actionExit = new QAction(bmp_procClass);
+		actionExit->setObjectName(QStringLiteral("actionExit"));
+		centralWidget = new QWidget(bmp_procClass);
+		centralWidget->setObjectName(QStringLiteral("centralWidget"));
+		bmp_procClass->setCentralWidget(centralWidget);
+		menuBar = new QMenuBar(bmp_procClass);
+		menuBar->setObjectName(QStringLiteral("menuBar"));
+		menuBar->setGeometry(QRect(0, 0, 600, 21));
+		menuSadsda = new QMenu(menuBar);
+		menuSadsda->setObjectName(QStringLiteral("menuSadsda"));
+		bmp_procClass->setMenuBar(menuBar);
+		mainToolBar = new QToolBar(bmp_procClass);
+		mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
+		bmp_procClass->addToolBar(Qt::TopToolBarArea, mainToolBar);
+		statusBar = new QStatusBar(bmp_procClass);
+		statusBar->setObjectName(QStringLiteral("statusBar"));
+		bmp_procClass->setStatusBar(statusBar);
 
-        menuBar->addAction(menuSadsda->menuAction());
-        menuSadsda->addAction(actionOpen);
-        menuSadsda->addSeparator();
-        menuSadsda->addAction(actionExit);
+		menuBar->addAction(menuSadsda->menuAction());
+		menuSadsda->addAction(actionOpen);
+		menuSadsda->addSeparator();
+		menuSadsda->addAction(actionExit);
 
 		fileDialog = new QFileDialog(0, "File Open", 0, "*.bmp *.jpg");
 		grViewer = new QGraphicsView(bmp_procClass);
 		grViewer->setAlignment(Qt::AlignCenter);
-		grViewer->setGeometry(10, 40, bmp_procClass->width()-20, bmp_procClass->height()-80);
+		grViewer->setGeometry(10, 40, bmp_procClass->width() - 20, bmp_procClass->height() - 80);
 
-        retranslateUi(bmp_procClass);
+		retranslateUi(bmp_procClass);
 
 		QObject::connect(actionOpen, SIGNAL(triggered()), bmp_procClass, SLOT(open_file()));
 		QObject::connect(actionExit, SIGNAL(triggered()), QApplication::instance(), SLOT(open_file()));

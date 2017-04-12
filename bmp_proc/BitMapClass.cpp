@@ -21,9 +21,11 @@ void BitMapClass::getPicturePlane(std::istream &in){
 	in.seekg(f_header->bmfOffBits, in.beg);
 	switch (i_header->bmiBitCount){
 	case 8:
+		x_size = i_header->bmiWidth;
+		y_size = i_header->bmiHeight;
 		for (int i = 0; i < i_header->bmiHeight; i++){
 			for (int j = 0; j < i_header->bmiWidth; j++){
-				char num_palette;
+				unsigned char num_palette;
 				in >> num_palette;
 				plane->at(i).at(j) = palette->at(num_palette);
 
