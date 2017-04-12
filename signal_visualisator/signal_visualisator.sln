@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "signal_visualisator", "sign
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QTInputWidget", "..\QTInputWidget\QTInputWidget.vcxproj", "{8010565F-A8A5-4B43-A083-1DD3C0194189}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bmp_proc", "..\bmp_proc\bmp_proc.vcxproj", "{3D4F5102-7526-4527-9094-0857AA910F27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{8010565F-A8A5-4B43-A083-1DD3C0194189}.Debug|Win32.Build.0 = Debug|Win32
 		{8010565F-A8A5-4B43-A083-1DD3C0194189}.Release|Win32.ActiveCfg = Release|Win32
 		{8010565F-A8A5-4B43-A083-1DD3C0194189}.Release|Win32.Build.0 = Release|Win32
+		{3D4F5102-7526-4527-9094-0857AA910F27}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3D4F5102-7526-4527-9094-0857AA910F27}.Debug|Win32.Build.0 = Debug|Win32
+		{3D4F5102-7526-4527-9094-0857AA910F27}.Release|Win32.ActiveCfg = Release|Win32
+		{3D4F5102-7526-4527-9094-0857AA910F27}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
