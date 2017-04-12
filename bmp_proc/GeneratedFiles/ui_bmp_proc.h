@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QFileDialog>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
@@ -35,6 +36,7 @@ public:
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 	QFileDialog *fileDialog;
+	QGraphicsView *grViewer;
 
     void setupUi(QMainWindow *bmp_procClass)
     {
@@ -67,11 +69,14 @@ public:
         menuSadsda->addAction(actionExit);
 
 		fileDialog = new QFileDialog(0, "File Open", 0, "*.bmp *.jpg");
+		grViewer = new QGraphicsView(bmp_procClass);
+		grViewer->setAlignment(Qt::AlignCenter);
+		grViewer->setGeometry(10, 40, bmp_procClass->width()-20, bmp_procClass->height()-80);
 
         retranslateUi(bmp_procClass);
 
 		QObject::connect(actionOpen, SIGNAL(triggered()), bmp_procClass, SLOT(open_file()));
-		QObject::connect(actionExit, SIGNAL(triggered()), QApplication::instance(), SLOT(quit()));
+		QObject::connect(actionExit, SIGNAL(triggered()), QApplication::instance(), SLOT(open_file()));
 
         QMetaObject::connectSlotsByName(bmp_procClass);
     } // setupUi

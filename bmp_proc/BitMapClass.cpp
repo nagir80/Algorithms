@@ -26,6 +26,8 @@ void BitMapClass::getPicturePlane(std::istream &in){
 				char num_palette;
 				in >> num_palette;
 				plane->at(i).at(j) = palette->at(num_palette);
+
+				
 			}
 		}
 		break;
