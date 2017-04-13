@@ -13,6 +13,8 @@ public:
 	std::vector<BitMapClass*> bitMap_collection;
 	bmp_proc(QWidget *parent = 0);
 	~bmp_proc();
+	void paintEvent(QPaintEvent *event) override;
+	BitMapClass *bmPlane;
 
 public slots:
 void open_file(void);

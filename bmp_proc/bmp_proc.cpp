@@ -6,10 +6,30 @@ bmp_proc::bmp_proc(QWidget *parent)
 	ui.setupUi(this);
 
 
+
 }
 
 bmp_proc::~bmp_proc()
 {
+
+}
+
+
+void bmp_proc::paintEvent(QPaintEvent *event){
+	QPainter painter(this);
+	QImage *image;
+	if (bmPlane != NULL){
+		image = new QImage(bmPlane->getX(), bmPlane->getY(), QImage::Format_RGB32);
+		for (int i = 0; i < bmPlane->getY(); i++){
+			for (int j = 0; j < bmPlane->getX(); j++){
+			//	int mid = (bmPlane->getPlane()->at(i).at(j)->R + bmPlane->getPlane()->at(i).at(j)->G + bmPlane->getPlane()->at(i).at(j)->B) / 3;
+				image->setPixel(j, i, qRgb(bmPlane->getPlane()->at(i).at(j)->R, bmPlane->getPlane()->at(i).at(j)->G, bmPlane->getPlane()->at(i).at(j)->B));
+			}
+		}
+		painter.drawImage(50, 50, *image);
+	}
+	
+
 
 }
 
@@ -21,9 +41,12 @@ void bmp_proc::open_file(void){
 	std::ifstream in_file;
 	in_file.open(str.toStdString(), std::ios_base::binary);
 
-	BitMapClass bmPlane(in_file);
+	bmPlane = new BitMapClass(in_file);
 
-	QGraphicsScene *gS = new QGraphicsScene();
+
+
+
+/*	QGraphicsScene *gS = new QGraphicsScene();
 
 	for (int i = 0; i < bmPlane.getY(); i++){
 		for (int j = 0; j < bmPlane.getX(); j++){
@@ -37,7 +60,7 @@ void bmp_proc::open_file(void){
 	
 	ui.grViewer->setScene(gS);
 	ui.grViewer->show();
-	
+*/	
 
 
 }

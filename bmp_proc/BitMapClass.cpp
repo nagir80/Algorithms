@@ -5,6 +5,8 @@
 
 BitMapClass::BitMapClass(std::istream &in)
 {
+
+
 	f_header = new BMapFileHeader();
 	i_header = new BMapInfoHeader();
 	palette = new BMapPalette();
@@ -15,9 +17,21 @@ BitMapClass::BitMapClass(std::istream &in)
 
 }
 
+BitMapClass::BitMapClass(QString f_name){
+	std::ifstream fil;
+	fil.open(f_name.toStdString(), std::ios::binary);
+	while (!fil.eof()){
+		char hlp;
+		fil >> hlp;
+		file_array.append(hlp);
+	}
+	
+}
+
 void BitMapClass::getPicturePlane(std::istream &in){
 	auto *plane_line = new std::vector<RGBQuads*>(i_header->bmiWidth);
 	plane = new Plane(i_header->bmiHeight, *plane_line);
+//	plane.resize(i_header->bmiHeight*i_header->bmiWidth * 4);
 	in.seekg(f_header->bmfOffBits, in.beg);
 	switch (i_header->bmiBitCount){
 	case 8:
@@ -27,7 +41,7 @@ void BitMapClass::getPicturePlane(std::istream &in){
 			for (int j = 0; j < i_header->bmiWidth; j++){
 				unsigned char num_palette;
 				in >> num_palette;
-				plane->at(i).at(j) = palette->at(num_palette);
+				plane->at(j).at(i)= palette->at(num_palette);
 
 				
 			}

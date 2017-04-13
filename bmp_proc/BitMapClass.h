@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <QByteArray>
+#include <QString>
 
 
 enum { BI_RGB = 0, BI_RLE8, BI_RLE4, BI_BITFIELDS, BI_JPEG, BI_PNG, BI_ALPHABITFIELDS };
@@ -19,6 +21,7 @@ typedef struct _RGB_QUADS{
 } RGBQuads;
 
 typedef std::vector<std::vector<RGBQuads*>> Plane;
+//typedef QByteArray 
 
 typedef std::vector<RGBQuads*> BMapPalette;
 
@@ -57,17 +60,19 @@ class BitMapClass
 	BMapFileHeader *f_header;
 	BMapInfoHeader *i_header;
 	BMapPalette *palette;   //палитра для палитрового вывода
-	Plane *plane;     //цвета пикселей
+	//Plane *plane;     //цвета пикселей
+	Plane *plane;
 	int x_size;
 	int y_size;
 public:
 	 explicit BitMapClass(std::istream &in);
+	 explicit BitMapClass(QString f_name);
 	 void getBMapPallette(std::istream &in);
 	 void getPicturePlane(std::istream &in);
 	 Plane* getPlane(void) { return plane; }
 	 int getX(void) { return x_size; }
 	 int getY(void) { return y_size; }
-
+	 QByteArray file_array;
 	~BitMapClass();
 };
 
