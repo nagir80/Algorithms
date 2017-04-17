@@ -16,10 +16,14 @@
 #include <QtWidgets/QFileDialog>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QScrollArea>
+#include <QTWidgets/QVBoxLayout>
 #include <QImage>
 #include <QPainter>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
+#include <QtWidgets/QLabel>
+
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
@@ -35,8 +39,11 @@ public:
 	QWidget *centralWidget;
 	QMenuBar *menuBar;
 	QMenu *menuSadsda;
+	QVBoxLayout *vLayout;
+	QWidget *layoutWidget;
 	QToolBar *mainToolBar;
 	QStatusBar *statusBar;
+	QScrollArea *scrollArea;
 	QFileDialog *fileDialog;
 	QGraphicsView *grViewer;
 	QImage  image;
@@ -54,6 +61,38 @@ public:
 		centralWidget = new QWidget(bmp_procClass);
 		centralWidget->setObjectName(QStringLiteral("centralWidget"));
 		bmp_procClass->setCentralWidget(centralWidget);
+/////////////////////////////////////////////////////////////////////
+//		QLabel *label1 = new QLabel("Label1");
+//		QLabel *label2 = new QLabel("Label2");
+//		QLabel *label3 = new QLabel("Label3");
+//		QLabel *label4 = new QLabel("Label1");
+//		QLabel *label5 = new QLabel("Label2");
+//		QLabel *label6 = new QLabel("Label3");
+		scrollArea = new QScrollArea(centralWidget);
+		scrollArea->setAlignment(Qt::AlignBottom);
+
+		layoutWidget = new QWidget();
+		
+		vLayout = new QVBoxLayout();
+		vLayout->setMargin(5);
+		vLayout->setSpacing(5);
+		
+		layoutWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+		layoutWidget->setLayout(vLayout);
+
+		scrollArea->setGeometry(100, 50, 400, 100);
+		scrollArea->setWidget(layoutWidget);
+
+/*		vLayout->addWidget(label1);
+		vLayout->addWidget(label2);
+		vLayout->addWidget(label3);
+		vLayout->addWidget(label4);
+		vLayout->addWidget(label5);
+		vLayout->addWidget(label6);
+
+		layoutWidget->adjustSize();
+	*/	
+////////////////////////////////////////////////////////////////////
 		menuBar = new QMenuBar(bmp_procClass);
 		menuBar->setObjectName(QStringLiteral("menuBar"));
 		menuBar->setGeometry(QRect(0, 0, 600, 21));

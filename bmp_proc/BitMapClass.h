@@ -12,10 +12,10 @@ enum { BI_RGB = 0, BI_RLE8, BI_RLE4, BI_BITFIELDS, BI_JPEG, BI_PNG, BI_ALPHABITF
 
 
 typedef struct _RGB_QUADS{
-	unsigned char B;
-	unsigned char G;
-	unsigned char R;
-	unsigned char F;
+	char B;
+	char G;
+	char R;
+	char F;
 
 	void getRGB(std::istream &in);
 } RGBQuads;

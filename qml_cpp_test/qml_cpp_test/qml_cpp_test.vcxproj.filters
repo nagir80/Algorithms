@@ -24,12 +24,12 @@
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Debug">
-      <UniqueIdentifier>{4ac2443b-c47b-484e-abc5-de6c426ec43f}</UniqueIdentifier>
+      <UniqueIdentifier>{ae2203da-5ac2-4d9d-b35f-269e35bc8b7a}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Release">
-      <UniqueIdentifier>{cb90f39d-ac72-4f8e-a929-f5f97d355a1a}</UniqueIdentifier>
+      <UniqueIdentifier>{9fc514c1-0485-4fa6-a402-e4c5d49afd77}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
@@ -38,57 +38,38 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bmp_proc.cpp">
+    <ClCompile Include="qml_cpp_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_bmp_proc.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_qml_cpp_test.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_bmp_proc.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_qml_cpp_test.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_bmp_proc.cpp">
+    <ClCompile Include="GeneratedFiles\qrc_qml_cpp_test.cpp">
       <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BitMapClass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mywidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_mywidget.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_mywidget.cpp">
-      <Filter>Generated Files\Release</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="bmp_proc.h">
+    <CustomBuild Include="qml_cpp_test.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="bmp_proc.ui">
+    <CustomBuild Include="qml_cpp_test.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="bmp_proc.qrc">
+    <CustomBuild Include="qml_cpp_test.qrc">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="mywidget.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="mywidget.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_bmp_proc.h">
+    <ClInclude Include="GeneratedFiles\ui_qml_cpp_test.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-    <ClInclude Include="BitMapClass.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_mywidget.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\main.qml">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
