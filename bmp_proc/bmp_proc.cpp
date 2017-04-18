@@ -56,11 +56,10 @@ void bmp_proc::open_file(void){
 	QLabel *graph = new QLabel();
 	graph->setMinimumHeight(20);
 	graph->setText("graph ");
-	ui.vLayout->setSpacing(10);
 	ui.vLayout->addWidget(graph);
 
 
-	//ui.layoutWidget->adjustSize();
+	ui.layoutWidget->adjustSize();
 	
 	
 	
