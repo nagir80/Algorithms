@@ -1,8 +1,10 @@
 FLAGS = -std=c++11
+all:	appl
 
-all:	main.cpp
+main.o:	main.cpp
 	g++ $(FLAGS) -c main.cpp -o main.o
-proj:	main.o util.o
-	g++ main.o util.o -o appl
-util:	util.cpp
+util.o:	util.cpp
 	g++ $(FLAGS) -c util.cpp -o util.o
+appl:	main.o util.o
+	g++ main.o util.o -o appl
+
