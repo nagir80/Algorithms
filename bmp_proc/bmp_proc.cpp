@@ -1,11 +1,12 @@
 #include "bmp_proc.h"
 
+
 bmp_proc::bmp_proc(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
 	num_key = 0;
-
+	setWindowFlags(Qt::Window  | Qt::WindowTitleHint | Qt::CustomizeWindowHint);
 
 }
 
@@ -15,25 +16,11 @@ bmp_proc::~bmp_proc()
 }
 
 void bmp_proc::closeEvent(QCloseEvent * event){
-//	bmPlane.clear();
+
 	
 }
 
 void bmp_proc::paintEvent(QPaintEvent *event){
-//	QPainter painter(this);
-/*	QImage *image;
-	if (bmPlane != NULL){
-		image = new QImage(bmPlane->getX(), bmPlane->getY(), QImage::Format_RGB32);
-		for (int i = 0; i < bmPlane->getY(); i++){
-			for (int j = 0; j < bmPlane->getX(); j++){
-			//	int mid = (bmPlane->getPlane()->at(i).at(j)->R + bmPlane->getPlane()->at(i).at(j)->G + bmPlane->getPlane()->at(i).at(j)->B) / 3;
-				image->setPixel(j, i, qRgb(bmPlane->getPlane()->at(i).at(j)->R, bmPlane->getPlane()->at(i).at(j)->G, bmPlane->getPlane()->at(i).at(j)->B));
-			}
-		}
-		painter.drawImage(50, 50, *image);
-	}
-	
-	*/
 
 }
 
@@ -54,32 +41,13 @@ void bmp_proc::open_file(void){
 
 	myWidget->show();
 	QLabel *graph = new QLabel();
-	graph->setMinimumHeight(20);
-	graph->setText("graph ");
+	graph->setMinimumHeight(50);
+	
+	graph->setFont(QFont("Times", 20, QFont::Bold));
+	graph->setText("Graph ");
 	ui.vLayout->addWidget(graph);
-
-
+	
 	ui.layoutWidget->adjustSize();
 	
-	
-	
-
-
-/*	QGraphicsScene *gS = new QGraphicsScene();
-
-	for (int i = 0; i < bmPlane.getY(); i++){
-		for (int j = 0; j < bmPlane.getX(); j++){
-			QPen *qp = new QPen(QColor(bmPlane.getPlane()->at(j).at(i)->R, bmPlane.getPlane()->at(j).at(i)->G, bmPlane.getPlane()->at(j).at(i)->B));
-			//QPen *qp = new QPen(Qt::black);
-
-			gS->addEllipse(j, i, 1, 1, *qp);
-		}
-	}
-	
-	
-	ui.grViewer->setScene(gS);
-	ui.grViewer->show();
-*/	
-
 
 }

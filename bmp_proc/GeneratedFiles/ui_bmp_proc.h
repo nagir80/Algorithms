@@ -23,6 +23,8 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+
 
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
@@ -62,36 +64,30 @@ public:
 		centralWidget->setObjectName(QStringLiteral("centralWidget"));
 		bmp_procClass->setCentralWidget(centralWidget);
 /////////////////////////////////////////////////////////////////////
-//		QLabel *label1 = new QLabel("Label1");
-//		QLabel *label2 = new QLabel("Label2");
-//		QLabel *label3 = new QLabel("Label3");
-//		QLabel *label4 = new QLabel("Label1");
-//		QLabel *label5 = new QLabel("Label2");
-//		QLabel *label6 = new QLabel("Label3");
-		scrollArea = new QScrollArea(centralWidget);
-		scrollArea->setAlignment(Qt::AlignBottom);
+
+		vLayout = new QVBoxLayout();
+		vLayout->setMargin(0);
+		vLayout->setSpacing(10);
+		vLayout->setAlignment(Qt::AlignTop);
+
 
 		layoutWidget = new QWidget();
-		
-		vLayout = new QVBoxLayout();
-		vLayout->setMargin(5);
-		vLayout->setSpacing(5);
-		
 		layoutWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+
+		layoutWidget->setMinimumHeight(100);
 		layoutWidget->setLayout(vLayout);
-
-		scrollArea->setGeometry(100, 50, 400, 100);
+	
+		scrollArea = new QScrollArea(centralWidget);
+		scrollArea->setAlignment(Qt::AlignTop);
+		scrollArea->setGeometry(100, 50, 400, 300);
 		scrollArea->setWidget(layoutWidget);
+		scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+		
+		
 
-/*		vLayout->addWidget(label1);
-		vLayout->addWidget(label2);
-		vLayout->addWidget(label3);
-		vLayout->addWidget(label4);
-		vLayout->addWidget(label5);
-		vLayout->addWidget(label6);
 
-		layoutWidget->adjustSize();
-	*/	
+
+
 ////////////////////////////////////////////////////////////////////
 		menuBar = new QMenuBar(bmp_procClass);
 		menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -99,12 +95,6 @@ public:
 		menuSadsda = new QMenu(menuBar);
 		menuSadsda->setObjectName(QStringLiteral("menuSadsda"));
 		bmp_procClass->setMenuBar(menuBar);
-		mainToolBar = new QToolBar(bmp_procClass);
-		mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-		bmp_procClass->addToolBar(Qt::TopToolBarArea, mainToolBar);
-		statusBar = new QStatusBar(bmp_procClass);
-		statusBar->setObjectName(QStringLiteral("statusBar"));
-		bmp_procClass->setStatusBar(statusBar);
 
 		menuBar->addAction(menuSadsda->menuAction());
 		menuSadsda->addAction(actionOpen);
@@ -112,14 +102,6 @@ public:
 		menuSadsda->addAction(actionExit);
 
 		fileDialog = new QFileDialog(0, "File Open", 0, "*.bmp *.jpg");
-
-
-//		grViewer = new QGraphicsView(bmp_procClass);
-//		grViewer->setAlignment(Qt::AlignCenter);
-//		grViewer->setGeometry(10, 40, bmp_procClass->width() - 20, bmp_procClass->height() - 80);
-
-		
-		
 		retranslateUi(bmp_procClass);
 
 		QObject::connect(actionOpen, SIGNAL(triggered()), bmp_procClass, SLOT(open_file()));
